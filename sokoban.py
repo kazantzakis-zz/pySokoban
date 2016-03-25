@@ -1,5 +1,6 @@
 import pygame
 import time
+import sys
 from Environment import Environment
 from Level import Level
 
