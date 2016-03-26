@@ -11,6 +11,10 @@ Use arrows keys to move player
 - R   => Reset level
 - ESC => Exit game
 
+## Themes
+To change theme change the following line of code into sokoban.py file
+`theme = "soft"`
+
 ## Screenshots
 !["Screenshot of the game"](sokobab-screenshot1.png?raw=true "Screenshot of the game")
 !["Screenshot of the game"](sokobab-screenshot2.png?raw=true "Screenshot of the game")
