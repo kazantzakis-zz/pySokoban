@@ -1,3 +1,9 @@
+# Name: pySokoban
+# Description: A sokoban implementation using python & pyGame
+# Author: Kazantzakis Nikos <kazantzakisnikos@gmail.com>
+# Date: 2015
+# Last Modified: 26-03-2016
+
 import pygame
 import time
 from Environment import Environment
@@ -5,13 +11,7 @@ from Level import Level
 
 def drawLevel(matrix_to_draw):
 	
-	print "myEnvironment.x: " + str(myEnvironment.size[0])
-	print "myEnvironment.y: " + str(myEnvironment.size[1])
-	print "Available slots in x axis: " + str(myEnvironment.size[0] / 36)
-	print "Available slots in y axis: " + str(myEnvironment.size[1] / 36)
-	print "Level x size:" + str(myLevel.getSize()[0])
-	print "Level y size:" + str(myLevel.getSize()[1])
-	
+	# Create level images
 	wall = pygame.image.load(myEnvironment.getPath() + '/themes/' + theme + '/images/wall.png').convert()
 	box = pygame.image.load(myEnvironment.getPath() + '/themes/' + theme + '/images/box.png').convert()
 	box_on_target =  pygame.image.load(myEnvironment.getPath() + '/themes/' + theme + '/images/box_on_target.png').convert()
@@ -19,14 +19,17 @@ def drawLevel(matrix_to_draw):
 	target = pygame.image.load(myEnvironment.getPath() + '/themes/' + theme + '/images/target.png').convert()
 	player = pygame.image.load(myEnvironment.getPath() + '/themes/' + theme + '/images/player.png').convert()
 	
-	# If horizontal or vertical resolutions is not enought to feet the level image then resize images
+	# If horizontal or vertical resolution is not enough to fit the level images then resize images
 	if myLevel.getSize()[0] > myEnvironment.size[0] / 36 or myLevel.getSize()[1] > myEnvironment.size[1] / 36:
 		
+		# If level's x size > level's y size then resize according to x axis
 		if myLevel.getSize()[0] / myLevel.getSize()[1] > 1:
 			new_image_size = myEnvironment.size[0]/myLevel.getSize()[0]
+		# If level's y size > level's x size then resize according to y axis
 		else:
 			new_image_size = myEnvironment.size[1]/myLevel.getSize()[1]
-			
+		
+		# Just to the resize job	
 		wall = pygame.transform.scale(wall, (new_image_size,new_image_size))
 		box = pygame.transform.scale(box, (new_image_size,new_image_size))
 		box_on_target = pygame.transform.scale(box_on_target, (new_image_size,new_image_size))
@@ -34,9 +37,10 @@ def drawLevel(matrix_to_draw):
 		target = pygame.transform.scale(target, (new_image_size,new_image_size))
 		player = pygame.transform.scale(player, (new_image_size,new_image_size))	
 		
+	# Just an associative array to map images to characters used in level design 
 	images = {'#': wall, ' ': space, '$': box, '.': target, '@': player, '*': box_on_target}
 	
-	# For real size images
+	# Get image size. Images are always squares so it doesn't care if you get width or height
 	box_size = wall.get_width()
 	
 	# Iterate all Rows
