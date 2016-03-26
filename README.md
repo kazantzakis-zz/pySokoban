@@ -5,7 +5,7 @@ Sokoban is a japanese transport puzzle, in which the player pushes boxes or crat
 Python 2.7 & pyGame 1.9
 
 
-## Hot to play
+## How to play
 Use arrows keys to move player
 - U   => Undo move
 - R   => Reset level
