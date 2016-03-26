@@ -18,10 +18,10 @@ At this moment three themes are supported. [soft | default | ksokoban]
 
 ## Level Sets
 Original game (published 1982 by Thinking Rabbit) included 20 levels. Sokoban 2 (1984) included 50 levels. Spectrum HoloByte was the first game company to bring Sokoban to gamers outside Japan with it's 1988 release called Soko-Ban. This release included 50 levels and are those levels called "original" nowdays.  
-In pySokoban each level is a plain text file. It uses the most commonly used format for representing a level wich is the following:  
+In pySokoban each level is a plain text file. A collection of levels is called a "Level Set". The most commonly used format for representing a level is the following:  
 
 | Level element         |  Character |
-|:---------------------:|:----------:|
+| --------------------- |:----------:|
 | Wall                  | #          |
 | Player                | @          |
 | Player on goal square | +          |
@@ -47,6 +47,9 @@ A typical level looks like this:
  #  #    ##########
  ####
 ```  
+
+In pySokoban each "Level Set" is stored in a subdirectory inside "levels" directory. For example the original Level Set (50 levels) from Spectrum HoloByte is stored under lelevels/original directory. Different Level Sets reside in different directories. To play a different Level Set change the following line of code into sokoban.py file  
+```level_set = "original"```   
 
 ## Screenshots
 Default theme  
