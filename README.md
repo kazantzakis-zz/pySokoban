@@ -7,9 +7,9 @@ Python 2.7 & pyGame 1.9
 
 ## Hot to play
 Use arrows keys to move player
-- U   -> Undo move
-- R   -> Reset level
-- ESC -> Exit game
+- U   => Undo move
+- R   => Reset level
+- ESC => Exit game
 
 ## Screenshots
 !["Screenshot of the game"](sokobab-screenshot1.png?raw=true "Screenshot of the game")
