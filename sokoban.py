@@ -37,7 +37,7 @@ def drawLevel(matrix_to_draw):
 		target = pygame.transform.scale(target, (new_image_size,new_image_size))
 		player = pygame.transform.scale(player, (new_image_size,new_image_size))	
 		
-	# Just an associative array to map images to characters used in level design 
+	# Just a Dictionary (associative array in pyhton's lingua) to map images to characters used in level design 
 	images = {'#': wall, ' ': space, '$': box, '.': target, '@': player, '*': box_on_target}
 	
 	# Get image size. Images are always squares so it doesn't care if you get width or height
