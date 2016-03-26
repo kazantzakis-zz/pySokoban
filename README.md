@@ -13,7 +13,9 @@ ESC => Exit game
 
 ## Themes
 To change theme change the following line of code into sokoban.py file  
-```theme = "soft"```
+```theme = "soft"```  
+
+At this moment three themes are supported. [soft | default | ksokoban]
 
 ## Screenshots
 !["Screenshot of the game"](sokobab-screenshot1.png?raw=true "Screenshot of the game")
