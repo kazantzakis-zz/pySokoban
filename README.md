@@ -63,4 +63,7 @@ Ksokoban theme
 * Refactor movePlayer() function
 * Implement ESC key
 * Count moves & pushes
-* Show moves & pushes in interface
+* Show moves & pushes in interface  
+
+## Known bugs
+* When player is on goal square and the u (Undo) button is pressed and a arrow key is pressed an unnecessary goal square is created. 
