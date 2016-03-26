@@ -1,5 +1,5 @@
 # pySokoban
-Sokoban is a japanese transport puzzle, in which the player pushes boxes or crates around in a warehouse, trying to get them to storage locations. This implematnation is bases on Python & pyGame Library.
+Sokoban is a japanese transport puzzle, in which the player pushes boxes or crates around in a warehouse, trying to get them to storage locations. This implementation is based on Python & pyGame Library.
 
 ## System Requirements
 Python 2.7 & pyGame 1.9
