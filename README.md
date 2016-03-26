@@ -59,3 +59,8 @@ Soft theme
 Ksokoban theme  
 !["Screenshot of the game"](themes/ksokoban/images/screenshot.png?raw=true "Screenshot of the game")  
 
+## To Do
+* Refactor movePlayer() function
+* Implement ESC key
+* Count moves & pushes
+* Show moves & pushes in interface
