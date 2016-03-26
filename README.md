@@ -6,13 +6,13 @@ Python 2.7 & pyGame 1.9
 
 
 ## How to play
-Use arrows keys to move player
-- U   => Undo move
-- R   => Reset level
-- ESC => Exit game
+Use arrows keys to move player  
+U   => Undo move  
+R   => Reset level  
+ESC => Exit game  
 
 ## Themes
-To change theme change the following line of code into sokoban.py file
+To change theme change the following line of code into sokoban.py file  
 ```theme = "soft"```
 
 ## Screenshots
