@@ -11,7 +11,7 @@ from Level import Level
 
 def drawLevel(matrix_to_draw):
 	
-	# Create level images
+	# Load level images
 	wall = pygame.image.load(myEnvironment.getPath() + '/themes/' + theme + '/images/wall.png').convert()
 	box = pygame.image.load(myEnvironment.getPath() + '/themes/' + theme + '/images/box.png').convert()
 	box_on_target =  pygame.image.load(myEnvironment.getPath() + '/themes/' + theme + '/images/box_on_target.png').convert()
