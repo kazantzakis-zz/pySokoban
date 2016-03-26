@@ -18,7 +18,7 @@ At this moment three themes are supported. [soft | default | ksokoban]
 
 ## Level Sets
 Original game (published 1982 by Thinking Rabbit) included 20 levels. Sokoban 2 (1984) included 50 levels. Spectrum HoloByte was the first game company to bring Sokoban to gamers outside Japan with it's 1988 release called Soko-Ban. This release included 50 levels and are those levels called "original" nowdays.  
-In pySokoban levels are plain text files. It uses the most commonly used format for representing a level wich is the following:  
+In pySokoban each level is a plain text file. It uses the most commonly used format for representing a level wich is the following:  
 
 | Level element         |  Character |
 |:---------------------:|:----------:|
@@ -29,6 +29,24 @@ In pySokoban levels are plain text files. It uses the most commonly used format 
 | Box on goal square    | *          |
 | Goal square	        | .          |
 | Floor                 | (Space)    |
+
+A typical level looks like this:  
+
+```
+   #########
+  ##   ##  ######
+###     #  #    ###
+#  $ #$ #  #  ... #
+# # $#@$## # #.#. #
+#  # #$  #    . . #
+# $    $ # # #.#. #
+#   ##  ##$ $ . . #
+# $ #   #  #$#.#. #
+## $  $   $  $... #
+ #$ ######    ##  #
+ #  #    ##########
+ ####
+```  
 
 ## Screenshots
 Default theme  
