@@ -13,7 +13,7 @@ Use arrows keys to move player
 
 ## Themes
 To change theme change the following line of code into sokoban.py file
-`theme = "soft"`
+``theme = "soft"``
 
 ## Screenshots
 !["Screenshot of the game"](sokobab-screenshot1.png?raw=true "Screenshot of the game")
