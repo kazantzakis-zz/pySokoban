@@ -18,10 +18,10 @@ To change theme change the following line of code into sokoban.py file
 At this moment three themes are supported. [soft | default | ksokoban]
 
 ## Screenshots
-Default theme
+Default theme  
 !["Screenshot of the game"](themes/default/images/screenshot.png?raw=true "Screenshot of the game")
-Soft theme
+Soft theme  
 !["Screenshot of the game"](themes/soft/images/screenshot.png?raw=true "Screenshot of the game")
-Ksokoban theme
+Ksokoban theme  
 !["Screenshot of the game"](themes/ksokoban/images/screenshot.png?raw=true "Screenshot of the game")
 
