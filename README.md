@@ -66,4 +66,4 @@ Ksokoban theme
 * Show moves & pushes in interface  
 
 ## Known bugs
-* When player is on goal square and the u (Undo) button is pressed and a arrow key is pressed an unnecessary goal square is created. 
+* When player is on goal square and the u (Undo) button is pressed and then an arrow key is pressed an unnecessary goal square is created. 
