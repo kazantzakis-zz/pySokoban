@@ -1,20 +1,42 @@
 import pygame
 import time
-import sys
 from Environment import Environment
 from Level import Level
 
 def drawLevel(matrix_to_draw):
-			
-	wall =  pygame.image.load(myEnvironment.getPath() + '/themes/' + theme + '/images/wall.png').convert()
-	box =  pygame.image.load(myEnvironment.getPath() + '/themes/' + theme + '/images/box.png').convert()
+	
+	print "myEnvironment.x: " + str(myEnvironment.size[0])
+	print "myEnvironment.y: " + str(myEnvironment.size[1])
+	print "Available slots in x axis: " + str(myEnvironment.size[0] / 36)
+	print "Available slots in y axis: " + str(myEnvironment.size[1] / 36)
+	print "Level x size:" + str(myLevel.getSize()[0])
+	print "Level y size:" + str(myLevel.getSize()[1])
+	
+	wall = pygame.image.load(myEnvironment.getPath() + '/themes/' + theme + '/images/wall.png').convert()
+	box = pygame.image.load(myEnvironment.getPath() + '/themes/' + theme + '/images/box.png').convert()
 	box_on_target =  pygame.image.load(myEnvironment.getPath() + '/themes/' + theme + '/images/box_on_target.png').convert()
-	space =  pygame.image.load(myEnvironment.getPath() + '/themes/' + theme + '/images/space.png').convert()
+	space = pygame.image.load(myEnvironment.getPath() + '/themes/' + theme + '/images/space.png').convert()
 	target = pygame.image.load(myEnvironment.getPath() + '/themes/' + theme + '/images/target.png').convert()
 	player = pygame.image.load(myEnvironment.getPath() + '/themes/' + theme + '/images/player.png').convert()
 	
+	# If horizontal or vertical resolutions is not enought to feet the level image then resize images
+	if myLevel.getSize()[0] > myEnvironment.size[0] / 36 or myLevel.getSize()[1] > myEnvironment.size[1] / 36:
+		
+		if myLevel.getSize()[0] / myLevel.getSize()[1] > 1:
+			new_image_size = myEnvironment.size[0]/myLevel.getSize()[0]
+		else:
+			new_image_size = myEnvironment.size[1]/myLevel.getSize()[1]
+			
+		wall = pygame.transform.scale(wall, (new_image_size,new_image_size))
+		box = pygame.transform.scale(box, (new_image_size,new_image_size))
+		box_on_target = pygame.transform.scale(box_on_target, (new_image_size,new_image_size))
+		space = pygame.transform.scale(space, (new_image_size,new_image_size))
+		target = pygame.transform.scale(target, (new_image_size,new_image_size))
+		player = pygame.transform.scale(player, (new_image_size,new_image_size))	
+		
 	images = {'#': wall, ' ': space, '$': box, '.': target, '@': player, '*': box_on_target}
 	
+	# For real size images
 	box_size = wall.get_width()
 	
 	# Iterate all Rows
@@ -345,7 +367,7 @@ myEnvironment = Environment()
 theme = "default"
 
 # Choose a level set
-level_set = "magic_sokoban6"
+level_set = "original"
 
 # Set the start Level
 current_level = 1
@@ -373,6 +395,3 @@ while True:
 				drawLevel(myLevel.getLastMatrix())
 			elif event.key == pygame.K_r:
 				initLevel(level_set,current_level)
-			elif event.key == pygame.K_ESCAPE:
-				pygame.quit()
-				sys.exit()

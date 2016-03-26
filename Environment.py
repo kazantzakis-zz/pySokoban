@@ -14,6 +14,8 @@ class Environment:
 	
 		if platform.system() == "Windows":
 			pygame.display.init()
+			self.size = (800,600)
+			self.screen = pygame.display.set_mode(self.size)
 		
 		else:
 			"Ininitializes a new pygame screen using the framebuffer"
@@ -42,10 +44,9 @@ class Environment:
 			if not found:
 				raise Exception('No suitable video driver found!')
         
-		self.size = (pygame.display.Info().current_w, pygame.display.Info().current_h)
-		print "Framebuffer size: %d x %d" % (self.size[0], self.size[1])
-		
-		self.screen = pygame.display.set_mode(self.size, pygame.FULLSCREEN)
+			self.size = (pygame.display.Info().current_w, pygame.display.Info().current_h)
+			print "Framebuffer size: %d x %d" % (self.size[0], self.size[1])
+			self.screen = pygame.display.set_mode(self.size, pygame.FULLSCREEN)
 		
 		# Clear the screen to start
 		self.screen.fill((0, 0, 0))        
