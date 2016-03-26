@@ -48,7 +48,7 @@ A typical level looks like this:
  ####
 ```  
 
-In pySokoban each "Level Set" is stored in a subdirectory inside "levels" directory. For example the original Level Set (50 levels) from Spectrum HoloByte is stored under lelevels/original directory. Different Level Sets reside in different directories. To play a different Level Set change the following line of code into sokoban.py file  
+In pySokoban each "Level Set" is stored in a subdirectory inside "levels" directory. For example the original Level Set (50 levels) from Spectrum HoloByte is stored under levels/original directory. Different Level Sets reside in different directories. To play a different Level Set change the following line of code into sokoban.py file  
 ```level_set = "original"```   
 
 ## Screenshots
