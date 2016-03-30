@@ -17,7 +17,11 @@ class Environment:
 			self.size = (800,600)
 			self.screen = pygame.display.set_mode(self.size)
 		
-		else:
+		elif self.getUserInterface() == "graphics":
+			pygame.display.init()
+			self.size = (800,600)
+			self.screen = pygame.display.set_mode(self.size)
+		else: 
 			"Ininitializes a new pygame screen using the framebuffer"
 			# Based on "Python GUI in Linux frame buffer"
 			# http://www.karoltomala.com/blog/?p=679

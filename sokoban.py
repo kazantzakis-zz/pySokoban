@@ -367,6 +367,8 @@ def initLevel(level_set,level):
 # Create the environment
 myEnvironment = Environment()
 
+print myEnvironment.getUserInterface()
+
 # Choose a theme
 theme = "default"
 
@@ -377,7 +379,7 @@ level_set = "original"
 current_level = 1
 
 # Initialize Level
-initLevel(level_set,current_level)
+#initLevel(level_set,current_level)
 
 target_found = False
 
