@@ -6,6 +6,7 @@
 
 import pygame
 import time
+import sys
 from Environment import Environment
 from Level import Level
 
@@ -383,9 +384,7 @@ target_found = False
 
 while True:
 	
-	events = pygame.event.get()
-  
-	for event in events:
+	for event in pygame.event.get():
 		if event.type == pygame.KEYDOWN:
 			if event.key == pygame.K_LEFT:
 				movePlayer("L",myLevel)
@@ -399,3 +398,6 @@ while True:
 				drawLevel(myLevel.getLastMatrix())
 			elif event.key == pygame.K_r:
 				initLevel(level_set,current_level)
+		elif event.type == pygame.QUIT:
+			pygame.quit()
+			sys.exit()

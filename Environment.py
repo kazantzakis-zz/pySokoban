@@ -14,11 +14,13 @@ class Environment:
 	
 		if platform.system() == "Windows":
 			pygame.display.init()
+			pygame.display.set_caption("pySokoban")
 			self.size = (800,600)
 			self.screen = pygame.display.set_mode(self.size)
 		
 		elif self.getUserInterface() == "graphics":
 			pygame.display.init()
+			pygame.display.set_caption("pySokoban")
 			self.size = (800,600)
 			self.screen = pygame.display.set_mode(self.size)
 		else: 
