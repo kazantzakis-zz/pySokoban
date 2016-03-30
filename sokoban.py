@@ -24,7 +24,7 @@ def drawLevel(matrix_to_draw):
 	if myLevel.getSize()[0] > myEnvironment.size[0] / 36 or myLevel.getSize()[1] > myEnvironment.size[1] / 36:
 		
 		# If level's x size > level's y size then resize according to x axis
-		if myLevel.getSize()[0] / myLevel.getSize()[1] > 1:
+		if myLevel.getSize()[0] / myLevel.getSize()[1] >= 1:
 			new_image_size = myEnvironment.size[0]/myLevel.getSize()[0]
 		# If level's y size > level's x size then resize according to y axis
 		else:
